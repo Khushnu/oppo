@@ -127,15 +127,15 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                               ),
                               CommonTextWidget(name: 'Wed', fontWeight: FontWeight.bold, textSize: 12,),
                               SizedBox(
-                                width: 41,
+                                width: 31,
                               ),
                               CommonTextWidget(name: 'T', textSize: 12,textColor: Colors.grey,),
                               SizedBox(
-                                width: 31,
+                                width: 20,
                               ),
                               CommonTextWidget(name: 'F', textSize: 12,textColor: Colors.grey,),
                               SizedBox(
-                                width: 30,
+                                width: 20,
                               ),
                               CommonTextWidget(name: 'S',textSize: 12,textColor: Colors.grey,),
                             ],
@@ -149,7 +149,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     Row(
                       children: [
                         BottomProgressWidget(
-                          width: 60, 
+                          width: 50, 
                           color: secondaryColor.withOpacity(0.9),
                         ),
                         const BottomProgressWidget(
@@ -161,19 +161,19 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                           color: secondaryColor2,
                         ),
                          BottomProgressWidget(
-                          width: 70, 
+                          width: 60, 
                           color: secondaryColor.withOpacity(0.9),
                         ),
                          const BottomProgressWidget(
-                          width: 45, 
+                          width: 42, 
                           color: secondaryColor3,
                         ),
                          const BottomProgressWidget(
-                          width: 28, 
+                          width: 20, 
                           color: secondaryColor3,
                         ),
                          const BottomProgressWidget(
-                          width: 51, 
+                          width: 46, 
                           color: secondaryColor2,
                         ),
                       ],

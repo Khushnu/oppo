@@ -1,30 +1,24 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:oppo/main.dart';
+import 'package:oppo/Screens/widget_tree.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Button Widget Test', (widgetTester) async {
+  // Create widget tree
+  await widgetTester.pumpWidget(const MaterialApp(
+    home: TestExampleWidgetTree()));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  // Locate button with text 'Click Me'
+  final buttonFinder = find.text('Click Me');
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  // Expect exactly one widget with the text 'Click Me'
+  expect(buttonFinder, findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+  // Simulate tap on button
+  await widgetTester.tap(buttonFinder);
+
+  // Rebuild the widget and update the UI
+  await widgetTester.pump();
+});
+
 }
